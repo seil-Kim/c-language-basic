@@ -1,8 +1,0 @@
-#include<stdio.h>
-int main(void)
-{
-	printf("Hello World!\n");
-	printf("seil-Kim\n");
-	return 0;
-	
-}
