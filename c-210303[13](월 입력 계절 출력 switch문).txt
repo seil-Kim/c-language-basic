@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main(void)
+{
+	int month;
+	
+	printf("월을 입력하시오.:");
+	scanf("%d", &month);
+	
+	switch(month){
+		case 3:
+		case 4:
+		case 5:
+			printf("현재는 봄 입니다.");
+			break;
+		case 6:
+		case 7:
+		case 8:
+			printf("현재는 여름 입니다.");
+			break;
+		case 9:
+		case 10:
+		case 11:
+			printf("현재는 가을 입니다.");
+			break;
+		default:
+			printf("현재는 겨울 입니다.");
+	} 
+	return 0;
+ } 
