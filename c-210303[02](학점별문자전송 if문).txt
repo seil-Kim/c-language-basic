@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(void)
+{
+	int x, y, z;
+	int sum;
+	double ave;
+	
+	printf("첫번째 점수를 입력하시오.:");
+	scanf("%d", &x);
+	printf("두번째 점수를 입력하시오.:");
+	scanf("%d", &y);
+	printf("세번째 점수를 입력하시오.:");
+	scanf("%d", &z);
+	
+	sum = x + y + z;
+	ave = (double)sum/3/20;
+	printf("당신의 학점 평균은 %5.2f 입니다.\n", ave);
+	
+	if(ave >= 4.5)
+	{
+		printf("장학생 입니다.\n");
+		printf("수업료가 전액 면제됩니다.\n");
+}
+printf("개강일은 9월 1일 입니다.\n");
+	return 0;
+}
