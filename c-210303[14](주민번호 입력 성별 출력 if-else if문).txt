@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(void)
+{
+	double ju;
+	int s;
+	
+	printf("주민등록번호 13자리를 입력하시오.:");
+	scanf("%lf", &ju);
+	
+	s = ju / 1000000;
+	s = s % 10;
+	
+	if(s == 1 || s == 3)
+		printf("남자");
+	else if(s == 2 || s == 4)
+		printf("여자");
+	else
+		printf("잘못된 주민등록번호 입니다.");
+	return 0;
+ }
