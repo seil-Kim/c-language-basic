@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(void)
+{
+	int s, age, cls;
+	
+	printf("성별(남자:1, 여자:2)과 나이를 입력하시오.:");
+	scanf("%d %d", &s, &age);
+	if(s == 1){
+		if(age >= 18) cls = 101;
+		else cls = 102;
+	} else {
+		if(age >= 18) cls = 201;
+		else cls = 202;
+	}
+	printf("당신은 %d 반에 배정되었습니다. \n", cls);
+	return 0;
+ } 
