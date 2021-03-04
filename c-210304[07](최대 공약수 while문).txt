@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main(void)
+{
+	int x, y, r;
+	
+	printf("두수를 입력 :");
+	scanf("%d %d", &x, &y);
+	
+	if(x < y){
+		r = x;
+		x = y;
+		y = r;
+	}
+	
+	while(y != 0){
+		r = x % y;
+		x = y;
+		y = r;
+	}
+	printf("최대공약수는 %d 입니다.\n", x);
+
+
+	return 0;
+}
