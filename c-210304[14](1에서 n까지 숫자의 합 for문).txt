@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(void)
+{
+	int i, n, sum = 0;
+	
+	printf("숫자를 입력해 주세요.:");
+	scanf("%d", &n);
+	
+	for(i = 1; i <= n; i++)
+		sum += i;
+	
+	printf("1부터 %d까지의 합은%d 입니다.\n", n, sum);
+	
+	return 0;
+}
