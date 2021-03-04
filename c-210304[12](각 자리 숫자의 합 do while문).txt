@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(void)
+{
+	int x;
+	int sum = 0;
+	
+	printf("숫자를 입력하시오.:");
+	scanf("%d", &x);
+	
+	do{
+		sum += x % 10;
+		x /= 10;
+	}while(x > 0);
+	
+	printf("각 자리 숫자의 합은 %d", sum);
+	return 0;
+ } 
