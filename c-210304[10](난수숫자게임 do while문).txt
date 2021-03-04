@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main(void)
+{
+	srand(time(NULL));
+	int answer = rand()%100;
+	int guess;
+	int tries = 0;
+	do
+	{
+		printf("숫자를 맞춰보세요.:");
+		scanf("%d", &guess);
+		tries++;
+		if(guess > answer)
+			printf("제시한 숫자가 높습니다.\n");
+		if(guess < answer)
+			printf("제시한 숫자가 낮습니다.\n");
+	}while(guess != answer);
+	
+	printf("축하합니다.시도횟수 = %d\n", tries);
+	return 0;
+}
