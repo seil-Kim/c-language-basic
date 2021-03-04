@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main(void)
+{
+	int pay, tax2;
+	double tax;
+	printf("연봉을 입력하시오(만원단위).:");
+	scanf("%d", &pay);
+	pay *= 10000;
+	if(pay <= 10000000) tax = pay * 0.09;
+	else{
+		tax = 10000000 * 0.09;
+		if(pay <= 40000000) tax += (pay - 10000000) * 0.18;
+		else{
+			tax += 30000000 * 0.18;
+			if(pay <= 80000000) tax += (pay - 40000000) * 0.27;
+			else{
+				tax += 40000000 * 0.27;
+				tax += (pay - 80000000) * 0.36;
+			}
+		}
+	}
+	tax2 = ((int)tax/10) * 10;
+	printf("당신의 연봉은 %d이며 세금은 %d 입니다.\n", pay, tax2);
+	return 0;
+}
