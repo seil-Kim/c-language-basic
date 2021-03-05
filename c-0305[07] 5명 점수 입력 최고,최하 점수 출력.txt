@@ -1,0 +1,26 @@
+#include<stdio.h>
+#define SIZE 5
+int main(void)
+{
+	int i;
+	int max = 0, min = 100;
+	int grade[SIZE];
+	
+	printf("5명의 점수를 입력하세요.:\n");
+	
+	for(i=0;i<SIZE;i++)
+		scanf("%d", &grade[i]);
+	
+	for(i=0;i<SIZE;i++){
+		if(grade[i]>max) max = grade[i];
+		if(grade[i]<min) min = grade[i]; 
+	}
+	
+	for(i=0;i<SIZE;i++)
+		printf("%d", grade[i]);
+		
+	printf("\n최고점수 = %d\n", max);
+	printf("최하점수 = %d\n", min);
+	
+	return 0;
+}
