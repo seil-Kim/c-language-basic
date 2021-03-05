@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(void)
+{
+	int sum = 0;
+	int sw = 1;
+	int i, n =1;
+	
+	for(i=1; sum < 100; ++i){
+		n *=2;
+		sum += n * sw;
+		sw = -sw;
+	}
+	printf("%d 항까지의 합 = %d\n",i-1,sum);
+	
+	return 0;
+}
