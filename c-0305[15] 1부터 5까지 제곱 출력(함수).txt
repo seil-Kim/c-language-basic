@@ -1,0 +1,16 @@
+#include<stdio.h>
+int square(int n);			//함수 원형 
+int main(void)
+{
+	int i, result;
+	for(i = 1; i <= 5; i++)
+	{
+		result = square(i); //함수호출
+		printf("%d\n", result); 
+	}
+	return 0;
+}
+int square(int n)			//함수 정의
+{
+	return(n * n);
+ }
