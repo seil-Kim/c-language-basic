@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+
+int main(void)
+{
+	double n, abs;
+	
+	printf("값을 입력하세요.:");
+	scanf("%lf", &n);
+	
+	abs = fabs(n);
+	printf("%0.f의 절대값은 %0.f 입니다.\n", n, abs);
+	
+	return 0;
+}
