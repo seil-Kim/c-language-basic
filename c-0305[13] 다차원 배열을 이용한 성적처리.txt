@@ -1,0 +1,25 @@
+#include<stdio.h>
+#define CLASSES 3
+#define STUDENTS 5
+int main(void)
+{
+	int s[CLASSES][STUDENTS]={
+		{95, 32, 87, 75, 66},
+		{95, 32, 87, 75, 66},
+		{90, 81, 82, 57, 83}
+	};
+	int cls, stu, total, clstotal = 0;
+	
+	for(cls=0;cls<CLASSES;cls++){
+		clstotal=0;
+		for(stu=0;stu<STUDENTS;stu++)
+			clstotal += s[cls][stu];
+		printf("%d반의 학급평균 = %d\n", cls+1, clstotal/STUDENTS);
+		total += clstotal;
+	}
+	
+	printf("--------------------\n");
+	printf("학년 전체 평균 = %d\n", total/(CLASSES*STUDENTS));
+	
+	return 0;
+}
