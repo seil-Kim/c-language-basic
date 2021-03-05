@@ -1,0 +1,24 @@
+#include<stdio.h>
+#define SIZE 10
+int main(void)
+{
+	int arr[SIZE];
+	int i;
+	int positives = 0, negatives = 0, zeros = 0;
+	printf("%d개의 정수를 입력하세요. :\n", 10);
+	for(i = 0; i < 10; i++)
+		scanf("%d", &arr[i]);
+	printf("입력된 배열 :");
+	for(i = 0; i < 10 ; i++){
+		printf("%d", arr[i]);
+		if(arr[i] > 0)
+			positives++;
+		else if(arr[i] < 0)
+			negatives++;
+		else zeros++;
+	}
+	printf("\n양수 = %d개, 음수 = %d개, 0 = %d개\n",
+	positives, negatives, zeros);
+	
+	return 0;
+}
