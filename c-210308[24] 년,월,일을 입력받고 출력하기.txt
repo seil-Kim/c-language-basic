@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<string.h>
+
+struct date // 구조체 선언 
+{
+	unsigned int year, month, day;
+};
+
+int main(void)
+{
+	struct date d1;
+	
+	printf("날짜를 입력하세요(연, 월, 일 순) : ");
+	scanf("%d %d %d", &d1.year, &d1.month, &d1.day);
+	
+	printf("%d년 %d월 %d일 입니다.", d1.year, d1.month, d1.day);
+	
+	return 0;
+}
