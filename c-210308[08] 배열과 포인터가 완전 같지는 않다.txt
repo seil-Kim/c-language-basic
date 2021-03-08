@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+int main(void)
+{
+	int a[5] = {10, 20, 30, 40, 50};
+	int *p = a;
+	
+	p++;
+	// a++; 은 안된다. (a+1)로 나타내야 한다. 
+	
+	printf("a = %d, p = %d\n", (a+1), p); 
+	
+	return 0;
+ } 
