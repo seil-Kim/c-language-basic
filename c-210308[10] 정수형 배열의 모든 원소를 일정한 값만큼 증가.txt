@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+int main(void)
+{
+	int arr[] = {15, 23, 7, 78, 34, 67, 45, 36, 90, 71};
+	int i;
+	int *p = arr;
+	int amount;
+	int count;
+	
+	count = sizeof(arr) / sizeof(arr[0]);
+	printf("[ 월본 배열 ]");
+	
+	for(i=0; i<count; i++)
+		printf("%3d", p[i]);
+	printf("\n증가량을 입력하세요 : ");
+	scanf("%d", &amount);
+	
+	for(i=0; i<count; i++, p++)
+		*p += amount;
+	printf("[ 증가후 배열 ]");
+	
+	for(p = arr, i = 0; i<count; i++)
+		printf("%3d", p[i]);
+	printf("\n");
+			
+	return 0;
+}
