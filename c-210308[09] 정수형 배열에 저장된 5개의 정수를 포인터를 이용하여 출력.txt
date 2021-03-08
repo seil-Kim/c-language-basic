@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main(void)
+{
+	int i;
+	int intA[] = {23, 65, 72, 18, 49};
+	int *p = intA;
+	
+	for(i=0; i<5; i++){
+		printf("%d번째 정수 : %d\n", i+1, *p);
+		p++;
+	}
+	
+	return 0;
+}
