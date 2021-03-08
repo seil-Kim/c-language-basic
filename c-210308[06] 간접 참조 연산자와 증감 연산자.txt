@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+int main(void)
+{
+	int j = 20, i = 10;
+	int v;
+	int *pi = &i;
+	int *pj = &j;
+	
+	printf("i = %d, pi = %u, pj = %u\n", i, pi, pj);
+	
+	v = (*pi)++;
+		printf("i = %d, pi = %d, v = %d\n", i, pi, v);
+	i = 10; pi = &i;
+	
+	v = *pi++;
+		printf("i = %d, pi = %d, v = %d\n", i, pi, v);
+	i = 10; pi = &i;
+	
+	v = *++pi;
+		printf("i = %d, pi = %d, v = %d\n", i, pi, v);
+	i = 10; pi = &i;
+	
+	v = ++*pi;
+		printf("i = %d, pi = %d, v = %d\n", i, pi, v);
+
+	return 0;
+}
