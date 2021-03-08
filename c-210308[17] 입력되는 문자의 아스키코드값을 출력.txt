@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main(void)
+{
+	char word = '  ';
+	
+	do{
+		printf("문자를 입력하시오 : ");
+		word = getche();
+		printf("\n%c의 아스키코드 = %d\n", word, word);
+	}
+	while(word != 'Q');
+	printf("\n");
+	
+	return 0;
+}
