@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+union example{		// 공용체 선언 
+	unsigned int i;
+	char c[4];
+};
+
+int main(void)
+{
+	union example v; // 공용체 변수 선 언 
+	
+	v.i = 0x41424344;
+	printf("v.i => %x\n", v.i);
+	printf("v.c => %c%c%c%c\n", v.c[0], v.c[1], v.c[2], v.c[3]);
+	
+}
